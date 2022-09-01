@@ -1,0 +1,54 @@
+.header {
+  position: absolute;
+  width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 798px;
+  }
+
+  &__descr {
+    display: inline-block;
+    margin: 0;
+    max-width: 250px;
+    text-align: right;
+    letter-spacing: 0.03em;
+
+    &--name {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    &--pdd {
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+
+  &__begin-date {
+    display: inline-block;
+    margin: 0;
+    width: 140px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    &--date {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--text {
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+}

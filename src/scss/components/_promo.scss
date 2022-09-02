@@ -1,12 +1,19 @@
 .promo {
-  padding-top: 180px;
   font-family: 'Montserrat';
   font-style: normal;
+  background-image: url("../img/bg-promo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__container {
     margin: 0 auto;
-    max-width: 1215px;
+    padding: 0 60px;
+    padding-top: 180px;
+    max-width: 1335px;
     min-height: 807px;
+    background-image: url("../img/bg-girl.png");
+    background-repeat: no-repeat;
+    background-position: bottom -55px right -90px;
   }
 
   &__title {
@@ -36,6 +43,7 @@
 
   &__remark-container {
     position: relative;
+    z-index: 1;
     margin-top: 53px;
     padding: 16px 25px;
     width: 296px;
@@ -46,12 +54,10 @@
     position: absolute;
     top: -15px;
     left: -55px;
-    // z-index: 3;
     width: 104px;
     height: 104px;
     background-image: url("../img/bg-remark-konus.png");
     background-repeat: no-repeat;
-    // filter: blur(6.10235px);
     transform: rotate(30.41deg);
   }
 
@@ -95,7 +101,60 @@
     }
   }
 
-  &__btn {
+  &__involvement {
+    display: flex;
+    align-items: center;
     margin-top: 70px;
+  }
+
+  &__btn {}
+
+  &__free {
+    position: relative;
+    margin-left: 91px;
+    max-width: 175px;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -45px;
+      left: -80px;
+      width: 118px;
+      height: 23px;
+      background-image: url("../img/arrow.svg");
+    }
+  }
+
+  &__descr {}
+
+  &__price {
+    position: absolute;
+    top: -30px;
+    right: -60px;
+    padding: 7px 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 22px;
+    transform: rotate(21.64deg);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: #ff0000;
+    }
   }
 }

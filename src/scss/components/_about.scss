@@ -1,0 +1,126 @@
+.about {
+  padding: 130px 0 101px 0;
+  background-image: url("../img/bg-about.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 60px;
+    max-width: 1280px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    &--more {
+      display: inline-block;
+      margin-left: 90px;
+      font-weight: 300;
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__us {
+    position: relative;
+    width: 500px;
+    margin-top: 58px;
+    margin-left: 20px;
+    padding: 31px 27px 58px;
+    font-family: 'Century Gothic';
+    border: 1px solid #343434;
+    border-radius: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -85px;
+      width: 127px;
+      height: 85px;
+      background-image: url("../img/bg-about-keys.png");
+      background-repeat: no-repeat;
+    }
+
+    b {
+      font-style: italic;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      text-transform: uppercase;
+
+      &:not(:first-child) {
+        display: inline-block;
+        margin-top: 60px;
+      }
+    }
+
+    p {
+      margin: 0;
+      margin-top: 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__mission {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 542px;
+    margin: 0;
+    margin-top: -20px;
+    margin-left: 79px;
+    padding: 18px 40px 18px 48px;
+    background-image: url("../img/bg-mission.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    dt {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 32px;
+      letter-spacing: 0.015em;
+      text-transform: uppercase;
+    }
+
+    dd {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      font-family: 'Century Gothic';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  &__mission-svg {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 612px;
+    height: 217px;
+    transform: translateX(-50%) translateY(-50%);
+    fill: #93d0fc;
+    filter: blur(18px);
+  }
+}

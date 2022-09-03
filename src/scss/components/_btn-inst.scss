@@ -1,0 +1,18 @@
+.btn-inst {
+  position: relative;
+  display: block;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  background-image: url("../img/btn-inst-bg.svg");
+  background-size: 100% 100%;
+  filter: drop-shadow(0px 0px 11px #d2a6ff);
+
+  &__svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    fill: #ffffff;
+  }
+}

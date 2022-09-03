@@ -1,13 +1,10 @@
 .tasks {
   position: relative;
   z-index: 10;
-  // top: -200px;
   padding: 360px 0 106px 0;
   background-image: url("../img/bg-tasks.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  // background-position: 0 200px;
-  // overflow-x: hidden;
 
   &::before {
     content: "";

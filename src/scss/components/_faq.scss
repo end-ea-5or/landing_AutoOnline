@@ -1,0 +1,49 @@
+.faq {
+  padding: 129px 0 370px 0;
+  background-image: url("../img/bg-faq.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    margin: 0 auto;
+    padding: 0 60px;
+    max-width: 1290px;
+  }
+
+  &__title {
+    position: relative;
+    width: fit-content;
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 960px;
+      height: 240px;
+      top: 50%;
+      left: 67%;
+      transform: translateX(-50%) translateY(-50%);
+      background-image: url("../img/bg-faq-title.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__descr {
+    display: inline-block;
+    margin-left: 200px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+  }
+}

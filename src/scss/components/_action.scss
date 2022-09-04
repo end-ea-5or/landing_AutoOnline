@@ -51,4 +51,18 @@
   &__countdown {
     margin-top: 60px;
   }
+
+  &__links {
+    position: relative;
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 22px;
+  }
+
+  &__promo {
+    position: absolute;
+    top: 26px;
+    right: -290px;
+  }
 }

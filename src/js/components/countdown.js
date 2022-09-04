@@ -19,12 +19,12 @@ let options = {
   month: 'long',
   day: 'numeric',
 };
-let dateOfMarathon = nowDate.toLocaleString("ru", options);
-// вставляем верную дату в блок на сайте
-const footerMarathonDay = countdown.querySelector('.date-of-marathon');
-const headerMarathonDay = document.querySelector('.header .date-of-marathon');
-footerMarathonDay.textContent = dateOfMarathon;
-headerMarathonDay.textContent = dateOfMarathon;
+let dateOfMarathon = tomorrow.toLocaleString("ru", options);
+// ищем блоки, куда надо вставить верную дату, и вставляем
+const marathonDayItems = document.querySelectorAll('[date-of-marathon]');
+marathonDayItems.forEach(el => {
+  el.textContent = dateOfMarathon;
+});
 //-----------------------------------------------------
 
 // функция для правильного склонения числительных (подсмотрена и честно стырена в интернете)

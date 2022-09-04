@@ -1,0 +1,99 @@
+.modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 607px;
+    margin: 0 auto;
+    padding: 50px 73px 58px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    color: #383838;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-top: 9px;
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 397px;
+    margin: 0;
+    margin-top: 30px;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    margin-top: 43px;
+  }
+
+  &__form-label {
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__form-input {
+    margin-top: 6px;
+    padding: 17px 16px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+
+    &:focus {
+      outline: 2px solid rgba(56, 56, 56, 0.4);
+    }
+
+    &::placeholder {
+      font-family: 'Century Gothic';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #A4A4A4;
+    }
+  }
+
+  &__form-btn {
+    margin-top: 50px;
+    align-self: center;
+  }
+}

@@ -1,0 +1,48 @@
+.promo-price {
+  position: relative;
+  margin-left: 91px;
+  max-width: 175px;
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -45px;
+    left: -80px;
+    width: 118px;
+    height: 23px;
+    background-image: url("../img/arrow.svg");
+  }
+
+  &__descr {}
+
+  &__price {
+    position: absolute;
+    top: -30px;
+    right: -60px;
+    padding: 7px 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 22px;
+    transform: rotate(21.64deg);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: #ff0000;
+    }
+  }
+}

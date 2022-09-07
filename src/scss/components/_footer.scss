@@ -1,14 +1,13 @@
 .footer {
-  position: absolute;
+  position: relative;
   z-index: 15;
-  bottom: 25px;
-  left: 0;
   width: 100%;
+  margin-top: -65px;
 
   &__container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin: 0 auto;
     padding: 0 60px;
     max-width: 1360px;

@@ -107,5 +107,7 @@
     margin-top: 70px;
   }
 
-  &__btn {}
+  &__btn {
+    z-index: 30;
+  }
 }

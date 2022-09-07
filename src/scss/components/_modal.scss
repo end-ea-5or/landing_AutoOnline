@@ -1,4 +1,5 @@
 .modal {
+  --transition-time: 0.3s;
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -6,17 +7,25 @@
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
 
   &__container {
-    display: flex;
+    // display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     max-width: 607px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 50px 73px 58px;
     background: #FFFFFF;
     border-radius: 15px;
     color: #383838;
+    cursor: default;
   }
 
   &__title {
@@ -96,4 +105,46 @@
     margin-top: 50px;
     align-self: center;
   }
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal__container.modal-open {
+  display: flex;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+  opacity: 1;
+  transition: opacity var(--transition-time);
+}
+
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }

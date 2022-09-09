@@ -6,13 +6,13 @@
         марафону</strong> от <i>Autoonline</i></p>
     <form class="modal__form" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
       <label class="modal__form-label" for="name">Ваше имя</label>
-      <input class="modal__form-input" type="text" name="name" placeholder="Введите ваше имя..." id="name">
+      <input class="modal__form-input" type="text" data-validate-field="name" name="name" placeholder="Введите ваше имя..." id="name">
       <label class="modal__form-label" for="city">Откуда вы?</label>
-      <input class="modal__form-input" type="text" name="city" placeholder="Введите город..." id="city">
+      <input class="modal__form-input" type="text" data-validate-field="city" name="city" placeholder="Введите город..." id="city">
       <label class="modal__form-label" for="phone">Ваш телефон</label>
-      <input class="modal__form-input" type="tel" name="phone" placeholder="+7 ..." id="phone">
+      <input class="modal__form-input" type="tel" data-validate-field="phone" name="phone" placeholder="+7 ..." id="phone">
       <label class="modal__form-label" for="email">Ваш e-mail</label>
-      <input class="modal__form-input" type="email" name="email" placeholder="email@mail.com" id="email">
+      <input class="modal__form-input" type="email" data-validate-field="email" name="email" placeholder="email@mail.com" id="email">
       <button type="submit" class="btn modal__form-btn">
         <svg class="btn__svg btn__svg--second" with="228" height="63.64">
           <use xlink:href="img/sprite.svg#bg-btn"></use>

@@ -32,16 +32,30 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'dedosip119@gmail.com'; // Логин на почте
-  $mail->Password   = 'zdsughjaegyfyows'; // Пароль на почте
+  $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+  $mail->Username   = 'marsel20002008@yandex.ru'; // Логин на почте
+  $mail->Password   = 'epvusrlpgjpcbljs'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('dedosip119@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('marsel20002008@yandex.ru', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('dedosip119@gmail.com');
+  $mail->addAddress('marsel20002008@yandex.ru');
+
+  // Прикрипление файлов к письму
+  if (!empty($file['name'][0])) {
+    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
+      $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
+      $filename = $file['name'][$ct];
+      if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
+          $mail->addAttachment($uploadfile, $filename);
+          $rfile[] = "Файл $filename прикреплён";
+      } else {
+          $rfile[] = "Не удалось прикрепить файл $filename";
+      }
+    }
+  }
 
   // Отправка сообщения
   $mail->isHTML(true);

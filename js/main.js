@@ -165,7 +165,7 @@ validate.addField('input[name="name"]', [{
     }
   };
 
-  xhr.open('GET', 'mail.php', true);
+  xhr.open('POST', 'mail.php', true);
   xhr.send(formData);
   event.target.reset();
 });

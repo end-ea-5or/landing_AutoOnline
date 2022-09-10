@@ -32,16 +32,16 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = ''; // Логин на почте
-  $mail->Password   = ''; // Пароль на почте
+  $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+  $mail->Username   = 'marsel20002008'; // Логин на почте
+  $mail->Password   = 'mcctdgkikpglxwpr'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('marsel20002008@yandex.ru', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('');
+  $mail->addAddress('marsel20002008@yandex.ru');
 
   // Прикрипление файлов к письму
   if (!empty($file['name'][0])) {

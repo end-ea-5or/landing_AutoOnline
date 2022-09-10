@@ -52,6 +52,7 @@ const plumber = require('gulp-plumber');
 const path = require('path');
 const zip = require('gulp-zip');
 const rootFolder = path.basename(path.resolve());
+const ghPages = require('gulp-gh-pages');
 
 // paths
 const srcFolder = './src';
@@ -68,6 +69,13 @@ const paths = {
   srcPartialsFolder: `${srcFolder}/partials`,
   resourcesFolder: `${srcFolder}/resources`,
 };
+
+// деплой на github-pages
+const ghPagesDeploy = () => {
+  return src('./app/**/*')
+  .pipe(ghPages());
+}
+
 
 let isProd = false; // dev by default
 
@@ -351,3 +359,5 @@ exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, i
 exports.cache = series(cache, rewrite);
 
 exports.zip = zipFiles;
+
+exports.deploy = ghPagesDeploy;

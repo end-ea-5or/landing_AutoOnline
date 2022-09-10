@@ -15,7 +15,7 @@
   transition: opacity var(--transition-time), visibility var(--transition-time);
 
   &__container {
-    // display: flex;
+    position: relative;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -102,8 +102,28 @@
   }
 
   &__form-btn {
+    order: 5;
     margin-top: 50px;
     align-self: center;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+    stroke: #383838;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    transform: rotate(45deg);
   }
 }
 
@@ -147,4 +167,23 @@
   left: 0;
   top: 0;
   width: 100%;
+}
+
+// ошибки валидации полей формы
+.just-validate-error-label {
+  margin-top: 10px;
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: tomato;
+}
+
+.just-validate-error-field {
+  border: 1px solid tomato;
+
+  &:focus {
+    outline: none;
+  }
 }

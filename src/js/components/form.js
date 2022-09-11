@@ -1,6 +1,6 @@
 import Inputmask from "inputmask";
 import JustValidate from 'just-validate';
-
+import  { modal } from '../components/modal';
 
 // Inputmask
 const form = document.querySelector('.modal__form');
@@ -47,19 +47,18 @@ validate
   .onSuccess((event) => {
     let formData = new FormData(event.target);
 
-    console.log(...formData);
-
     let xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           console.log('Отправлено');
+          modal.close();
         }
       }
     }
 
-    xhr.open('POST', 'mail.php', true);
+    xhr.open('POST', 'https://httpbin.org/post', true); // тестовый эхо-сервер метод post
     xhr.send(formData);
 
     event.target.reset();

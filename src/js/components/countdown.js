@@ -13,7 +13,7 @@ const secondsText = countdown.querySelector('.countdown__text--seconds');
 let nowDate = new Date();
 // получаем завтрашний день 20:00
 // отсчет будет вестись до этой даты
-let tomorrow = new Date(`${nowDate.getFullYear()}-${nowDate.getMonth() + 1}-${nowDate.getDate() + 1}-${20}:${0}`);
+let tomorrow = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate() + 1, 20, 0);
 // получаем день и месяц даты марафона на русском языке
 let options = {
   month: 'long',
@@ -35,7 +35,7 @@ function declOfNum(number, titles) {
 
 const timeCount = () => {
   let now = new Date();
-  let tomorrow = new Date(`${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate() + 1}-${20}:${0}`);
+  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 20, 0);
   let differenceOfDays = tomorrow - now;
 
   let hours = Math.floor(differenceOfDays / 1000 / 60 / 60);

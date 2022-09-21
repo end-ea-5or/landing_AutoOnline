@@ -9,6 +9,11 @@
   line-height: 17px;
   letter-spacing: 0.03em;
 
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -17,9 +22,15 @@
     width: 118px;
     height: 23px;
     background-image: url("../img/arrow.svg");
-  }
 
-  &__descr {}
+    @media (max-width: 768px) {
+      bottom: 11px;
+      left: -73px;
+      width: 62px;
+      height: 46px;
+      background-image: url("../img/arrow-2.svg");
+    }
+  }
 
   &__price {
     position: absolute;
@@ -34,6 +45,15 @@
     border-radius: 22px;
     transform: rotate(21.64deg);
 
+    @media (max-width: 768px) {
+      top: -21px;
+      right: -6px;
+      padding: 5px 10px;
+      font-size: 9px;
+      line-height: 10px;
+      border-radius: 14px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -43,6 +63,11 @@
       width: 60px;
       height: 2px;
       background-color: #ff0000;
+
+      @media (max-width: 768px) {
+        width: 41px;
+        height: 1px;
+      }
     }
   }
 }

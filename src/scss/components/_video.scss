@@ -2,7 +2,6 @@
   position: absolute;
   z-index: 10;
   top: 0;
-  // right: -50px;
   right: -80px;
   width: 801px;
   height: 889px;
@@ -10,6 +9,24 @@
   background-repeat: no-repeat;
   background-position: 540px 200px, 162px 203px, 212px 255px, center;
   background-size: auto, 553px auto, 189px auto, 801px 889px;
+
+  @media (max-width: 1110px) {
+    position: relative;
+    top: -124px;
+    right: 0;
+    height: 679px;
+  }
+
+  @media (max-width: 768px) {
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 333px;
+    background-image: url("../img/bg-video-arrow.png"), url("../img/bg-macbook-mobile.png"), url("../img/bg-video-sign.png"), url("../img/bg-video.png");
+    background-repeat: no-repeat;
+    background-position: 211px 48px, center, -10px 157px, center;
+    background-size: 88px 88px, 256px 151px, 87px auto, contain;
+  }
 
   &__link {
     position: absolute;
@@ -20,6 +37,13 @@
     height: 97px;
     border-radius: 50%;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      top: 239px;
+      left: 220px;
+      width: 53px;
+      height: 53px;
+    }
   }
 
   &__watch {
@@ -34,6 +58,14 @@
     line-height: 17px;
     letter-spacing: 0.03em;
 
+    @media (max-width: 768px) {
+      top: 254px;
+      left: 111px;
+      width: 90px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -43,6 +75,13 @@
       height: 34px;
       background-image: url("../img/video-arrow.svg");
 
+      @media (max-width: 768px) {
+        top: 38px;
+        left: 18px;
+        width: 78px;
+        height: 25px;
+        background-image: url("../img/video-arrow-mobile.svg");
+      }
     }
   }
 
@@ -61,12 +100,22 @@
       height: 27px;
       fill: #ffffff;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+
+      @media (max-width: 768px) {
+        width: 15px;
+        height: 15px;
+      }
     }
 
     &--circle {
       width: 60px;
       height: 60px;
       fill: #ffc700;
+
+      @media (max-width: 768px) {
+        width: 33px;
+        height: 33px;
+      }
     }
 
     &--stroke {
@@ -76,6 +125,11 @@
       stroke: #d9e454;
       stroke-width: 2px;
       filter: drop-shadow(0 0 4px #d9e454) blur(4px);
+
+      @media (max-width: 768px) {
+        width: 33px;
+        height: 33px;
+      }
     }
 
     &--border {
@@ -85,6 +139,11 @@
       stroke: #e4b354;
       stroke-width: 2px;
       filter: drop-shadow(0 0 14px rgba(228, 179, 84, 0.6)) drop-shadow(0 0 4px #e4b354);
+
+      @media (max-width: 768px) {
+        width: 53px;
+        height: 53px;
+      }
     }
   }
 }

@@ -6,6 +6,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (max-width: 768px) {
+    padding: 95px 0 35px 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -51,6 +55,7 @@
     @media (max-width: 768px) {
       font-size: 19px;
       line-height: 23px;
+      text-align: center;
     }
   }
 
@@ -89,18 +94,21 @@
     display: flex;
     flex-direction: column;
     width: 278px;
-    min-height: 262px;
+    height: 262px;
     padding: 179px 28px 49px 20px;
     border: 1px solid #454545;
     border-radius: 11px;
     justify-items: center;
-    background-position: center;
+    background-position: center top -17px;
 
     @media (max-width: 768px) {
       width: 229px;
+      height: 215px;
       min-height: 215px;
       padding: 149px 24px 40px 24px;
       border-radius: 9px;
+      background-size: contain;
+      background-position: center top -11px;
     }
 
     &--1 {

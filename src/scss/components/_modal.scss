@@ -19,13 +19,19 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    max-width: 607px;
+    width: 607px;
     margin: 50px auto;
     padding: 50px 73px 58px;
     background: #FFFFFF;
     border-radius: 15px;
     color: #383838;
     cursor: default;
+
+    @media (max-width: 768px) {
+      max-width: 60%;
+      min-width: 300px;
+      padding: 40px 20px 30px;
+    }
   }
 
   &__title {
@@ -37,6 +43,12 @@
     line-height: 32px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 19px;
+      line-height: 23px;
+    }
   }
 
   &__descr {
@@ -48,6 +60,11 @@
     font-size: 14px;
     line-height: 17px;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      line-height: 15px;
+    }
   }
 
   &__text {
@@ -59,6 +76,12 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+
+    @media (max-width: 768px) {
+      margin-top: 15px;
+      font-size: 10px;
+      line-height: 12px;
+    }
   }
 
   &__form {
@@ -66,6 +89,10 @@
     flex-direction: column;
     align-self: stretch;
     margin-top: 43px;
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
   }
 
   &__form-label {
@@ -74,6 +101,11 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      line-height: 12px;
+    }
 
     &:not(:first-child) {
       margin-top: 15px;
@@ -87,6 +119,12 @@
     border: none;
     border-radius: 10px;
 
+    @media (max-width: 768px) {
+      padding: 10px 8px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
     &:focus {
       outline: 2px solid rgba(56, 56, 56, 0.4);
     }
@@ -98,6 +136,11 @@
       font-size: 12px;
       line-height: 15px;
       color: #A4A4A4;
+
+      @media (max-width: 768px) {
+        font-size: 10px;
+        line-height: 12px;
+      }
     }
   }
 
@@ -105,6 +148,10 @@
     order: 5;
     margin-top: 50px;
     align-self: center;
+
+    @media (max-width: 768px) {
+      margin-top: 25px;
+    }
   }
 }
 
@@ -124,6 +171,11 @@
     stroke-width: 5px;
     stroke-linecap: round;
     transform: rotate(45deg);
+
+    @media (max-width: 768px) {
+      width: 17px;
+      height: 17px;
+    }
   }
 }
 

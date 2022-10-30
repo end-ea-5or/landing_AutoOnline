@@ -9,7 +9,7 @@
   line-height: 17px;
   letter-spacing: 0.03em;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1145px) {
     font-size: 12px;
     line-height: 15px;
   }
@@ -23,7 +23,7 @@
     height: 23px;
     background-image: url("../img/arrow.svg");
 
-    @media (max-width: 768px) {
+    @media (max-width: 1145px) {
       bottom: 11px;
       left: -73px;
       width: 62px;
@@ -45,7 +45,7 @@
     border-radius: 22px;
     transform: rotate(21.64deg);
 
-    @media (max-width: 768px) {
+    @media (max-width: 1145px) {
       top: -21px;
       right: -6px;
       padding: 5px 10px;
@@ -64,7 +64,7 @@
       height: 2px;
       background-color: #ff0000;
 
-      @media (max-width: 768px) {
+      @media (max-width: 1145px) {
         width: 41px;
         height: 1px;
       }

@@ -21,7 +21,7 @@ let options = {
 };
 let dateOfMarathon = tomorrow.toLocaleString("ru", options);
 // ищем блоки, куда надо вставить верную дату, и вставляем
-const marathonDayItems = document.querySelectorAll('[date-of-marathon]');
+const marathonDayItems = document.querySelectorAll('[data-marathon-date]');
 marathonDayItems.forEach(el => {
   el.textContent = dateOfMarathon;
 });

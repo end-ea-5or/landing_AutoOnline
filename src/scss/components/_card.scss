@@ -1,8 +1,16 @@
 .card {
-  padding: 22px 61px 34px;
+  padding: 22px 50px 34px 61px;
   background: #e1e1e1;
   border-radius: 11px;
   color: #4b4b4b;
+
+  @media (max-width: 1110px) {
+    padding: 22px 30px 34px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 13px 22px 21px 23px;
+  }
 
   &__title {
     margin: 0;
@@ -13,10 +21,20 @@
     line-height: 31px;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: 1110px) {
+      margin: 0 30px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 12.5px;
+      line-height: 15px;
+    }
   }
 
   &__list {
     margin: 0;
+    padding: 0;
     margin-top: 22px;
     list-style: none;
     font-family: 'Century Gothic';
@@ -24,6 +42,11 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+
+    @media (max-width: 768px) {
+      margin-top: 15px;
+      padding-right: 25px;
+    }
   }
 
   &__item {
@@ -33,8 +56,17 @@
     font-size: 14px;
     line-height: 17px;
 
+    @media (max-width: 768px) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
     &:not(:first-child) {
       margin-top: 22px;
+
+      @media (max-width: 768px) {
+        margin-top: 15px;
+      }
     }
   }
 }

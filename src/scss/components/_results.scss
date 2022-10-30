@@ -1,8 +1,12 @@
 .results {
-  padding: 129px 0 370px 0;
+  padding: 129px 0 206px;
   background-image: url("../img/bg-results.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 768px) {
+    padding: 100px 0 155px;
+  }
 
   &__container {
     display: flex;
@@ -11,6 +15,10 @@
     margin: 0 auto;
     padding: 0 100px;
     max-width: 1360px;
+
+    @media (max-width: 768px) {
+      padding: 0 47px;
+    }
   }
 
   &__title {
@@ -25,10 +33,21 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
+    @media (max-width: 768px) {
+      width: 260px;
+      font-size: 19px;
+      line-height: 23px;
+    }
+
     span {
       font-weight: 300;
       font-size: 26px;
       line-height: 32px;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+        line-height: 15px;
+      }
     }
   }
 
@@ -44,19 +63,39 @@
     line-height: 21px;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      max-width: 70%;
+      min-width: 240px;
+      margin-top: 30px;
+      font-size: 11px;
+      line-height: 13px;
+      text-transform: none;
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    column-gap: 40px;
-    margin-top: 134px;
+    gap: 62px;
+    margin: 134px 100px 0;
+
+    @media (max-width: 768px) {
+      width: 70%;
+      min-width: 225px;
+      grid-template-columns: 1fr;
+      margin: 60px 0 0;
+    }
   }
 
   &__card-1 {
     position: relative;
     grid-column: 1/ 6;
     align-self: start;
+
+    @media (max-width: 768px) {
+      grid-column: auto;
+    }
 
     &::before {
       content: "";
@@ -68,6 +107,13 @@
       background-image: url("../img/bg-remark-konus.png");
       background-size: contain;
       transform: rotate(-22.08deg);
+
+      @media (max-width: 768px) {
+        bottom: -23px;
+        left: -35px;
+        width: 72px;
+        height: 72px;
+      }
     }
   }
 
@@ -75,6 +121,11 @@
     position: relative;
     grid-column: 6/ -1;
     margin-top: 75px;
+
+    @media (max-width: 768px) {
+      grid-column: auto;
+      margin: 0;
+    }
 
     &::before {
       content: "";
@@ -85,6 +136,14 @@
       height: 167px;
       background-image: url("../img/wheel.png");
       background-size: contain;
+
+      @media (max-width: 768px) {
+        top: auto;
+        bottom: -29px;
+        right: -27px;
+        width: 52px;
+        height: 64px;
+      }
     }
   }
 }

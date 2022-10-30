@@ -6,6 +6,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (max-width: 768px) {
+    padding: 100px 0 352px 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -16,6 +20,13 @@
     width: 4063px;
     height: 694px;
     background-image: url("../img/bg-clouds.png");
+
+    @media (max-width: 768px) {
+      top: -120px;
+      width: 1300px;
+      height: 222px;
+      background-size: contain;
+    }
   }
 
   &__container {
@@ -25,6 +36,10 @@
     margin: 0 auto;
     padding: 0 100px;
     max-width: 1360px;
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
   }
 
   &__title {
@@ -39,17 +54,31 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
+    @media (max-width: 768px) {
+      font-size: 19px;
+      line-height: 23px;
+    }
+
     span {
       font-weight: 300;
       font-size: 26px;
       line-height: 32px;
       text-transform: lowercase;
 
+      @media (max-width: 768px) {
+        margin: 0 20px;
+        font-size: 12px;
+        line-height: 15px;
+      }
     }
   }
 
   &__countdown {
     margin-top: 60px;
+
+    @media (max-width: 768px) {
+      margin-top: 40px;
+    }
   }
 
   &__links {
@@ -58,11 +87,74 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     column-gap: 22px;
+
+    @media (max-width: 768px) {
+      margin-top: 45px;
+      column-gap: 30px;
+    }
+  }
+}
+
+.action__btn {
+  @media (max-width: 768px) {
+    order: -1;
+    width: 140px;
+    height: 39px;
   }
 
-  &__promo {
-    position: absolute;
-    top: 26px;
-    right: -290px;
+  & svg {
+    @media (max-width: 768px) {
+      width: 140px;
+      height: 39px;
+    }
+  }
+
+  & .btn__text {
+    @media (max-width: 768px) {
+      font-size: 8px;
+      line-height: 10px;
+    }
+  }
+}
+
+.action__promo {
+  position: absolute;
+  top: 26px;
+  right: -290px;
+  margin: 0;
+
+  @media (max-width: 1145px) {
+    top: auto;
+    bottom: -82px;
+    left: 95px;
+    right: auto;
+  }
+
+  @media (max-width: 768px) {
+    left: -32px;
+  }
+
+  &::before {
+    @media (max-width: 1145px) {
+      bottom: 14px;
+      left: auto;
+      right: -7px;
+      width: 39px;
+      height: 43px;
+      background-image: url("../img/arrow-3.svg");
+    }
+  }
+
+  & .promo-price__price {
+    @media (max-width: 1145px) {
+      top: -1px;
+      right: -58px;
+      transform: rotate(-25.86deg);
+    }
+
+    @media (max-width: 768px) {
+      top: 41px;
+      right: 0;
+    }
   }
 }

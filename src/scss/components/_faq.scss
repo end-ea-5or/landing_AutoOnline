@@ -4,10 +4,21 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (max-width: 768px) {
+    padding: 100px 0 146px 0;
+  }
+
   &__container {
     margin: 0 auto;
     padding: 0 60px;
     max-width: 1290px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 10px;
+    }
   }
 
   &__title {
@@ -21,6 +32,11 @@
     line-height: 44px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 19px;
+      line-height: 23px;
+    }
 
     &::before {
       content: "";
@@ -45,5 +61,23 @@
     font-size: 26px;
     line-height: 32px;
     letter-spacing: 0.03em;
+
+    @media (max-width: 768px) {
+      margin: 0;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__accordion {
+    margin-top: 93px;
+    padding: 0 60px;
+
+    @media (max-width: 768px) {
+      width: 70%;
+      min-width: 300px;
+      margin-top: 81px;
+      padding: 0;
+    }
   }
 }
